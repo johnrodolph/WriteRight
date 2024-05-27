@@ -35,7 +35,7 @@ def main():
             corrected_text, misspelled_and_corrected = correct_text(input_text)
             st.header("Original Text:")
             st.write(input_text)
-            st.header("Corrected Text:")
+            st.header("Correct Grammar and Spelling:")
             st.write(corrected_text)
             if misspelled_and_corrected:
                 df = pd.DataFrame(misspelled_and_corrected, columns=["Misspelled Word", "Correct Spelling"])
@@ -44,7 +44,7 @@ def main():
         elif uploaded_file:
             corrected_text, misspelled_and_corrected = process_uploaded_file(uploaded_file)
             if corrected_text:
-                st.header("Corrected Text:")
+                st.header("Correct Grammar and Spelling:")
                 st.write(corrected_text)
                 if misspelled_and_corrected:
                     df = pd.DataFrame(misspelled_and_corrected, columns=["Misspelled Word", "Correct Spelling"])
