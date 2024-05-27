@@ -25,7 +25,7 @@ def main():
     st.write("Enter a sentence or upload a text file (.txt) to check grammar and spelling.")
 
     st.subheader("Enter your sentence:")
-    input_text = st.text_area("", height=200)
+    input_text = st.text_area("", height=350)
 
     st.subheader("Upload a text file (.txt):")
     uploaded_file = st.file_uploader("", type=['txt'])
